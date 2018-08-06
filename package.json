@@ -1,13 +1,13 @@
 {
-  "name": "fastshell",
-  "title": "Fiercely quick and opinionated front-ends",
-  "author": "Hossein Karami",
-  "url": "https://HosseinKarami.github.io/fastshell",
-  "version": "1.0.5",
+  "name": "joseguerra-uk",
+  "title": "Just a personal design for my domain",
+  "author": "Jose Guerra",
+  "url": "https://joseguerra.uk",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "http://github.com/HosseinKarami/fastshell.git"
+    "url": "https://github.com/jsguerra/joseguerra-uk.git"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
