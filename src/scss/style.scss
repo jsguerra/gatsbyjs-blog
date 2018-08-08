@@ -12,7 +12,10 @@
 @import 'modules/_vars.scss';
 @import 'modules/_clearfix.scss';
 @import 'modules/_defaults.scss';
-@import 'modules/_normalize.scss';
+
+// Normalise replaced with Bootstrap Reboot
+@import '_bootstrap-reboot.scss';
+
 //----------------------------------*\
 // PARTIALS
 //----------------------------------*/
