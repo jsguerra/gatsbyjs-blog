@@ -282,6 +282,9 @@ template {
   display: none !important; }
 
 /*# sourceMappingURL=bootstrap-reboot.css.map */
+.header {
+  background-color: #eff1f5; }
+
 .nav ul {
   list-style: none; }
 
