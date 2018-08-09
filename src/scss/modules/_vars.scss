@@ -1,3 +1,13 @@
+// ================================
+// Text Properties
+// ================================
+
+// Enter the values found from body copy
+
+$body-font-size: 16px !default;
+$body-line-height: 27px !default;
+
+
 // =====================
 // Colour Palette
 // =====================
@@ -6,3 +16,10 @@ $darken : darken(#F7F6F0 , 30%);
 $back: darken(#F7F6F0, 40%);
 
 $athens-gray: #eff1f5;
+
+
+// =====================
+// Dimension Variables
+// =====================
+$boundry: 1180;
+$gutter: 20px;

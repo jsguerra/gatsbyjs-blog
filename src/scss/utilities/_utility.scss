@@ -130,43 +130,6 @@
 
 
 // ================================
-// Columns
-// ================================
-
-// Example usage:
-// .spotlight-module {
-//   @include column(2, 3, 6, 20em, 30em, 60em);
-// }
-// 2 columns at 20em, 4 columns at 40em, 8 columns at 80em
-
-@mixin column($spread...) {
-  $argument-length: length($spread);
-  $argument-split: $argument-length / 2;
-
-  @for $i from 1 through $argument-split {
-
-    @media (min-width: nth($spread, ($argument-split + $i))) {
-      width: percentage(1 / nth($spread, $i));
-
-      @if $i == 1 {
-        float: left;
-      }
-
-    }
-
-  }
-
-}
-
-.col-4,
-%col-4 {
-  @include column(2, 4, $bp-medium, $bp-huge);
-}
-
-
-
-
-// ================================
 // Centering Position Mixin
 // ================================
 
