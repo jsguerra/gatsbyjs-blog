@@ -1,8 +1,9 @@
 //----------------------------------*\
-// SCSS MIXINS
+// SCSS MIXINS AND FUNCTIONS
 //----------------------------------*/
 
-@import 'mixins/_position.scss';
+@import 'utilities/_position.scss';
+@import 'utilities/_utility.scss';
 
 //----------------------------------*\
 // CONFIG MODULES
@@ -14,7 +15,7 @@
 @import 'modules/_defaults.scss';
 
 // Normalise replaced with Bootstrap Reboot
-@import '_bootstrap-reboot.scss';
+@import 'vendor/_bootstrap-reboot.scss';
 
 //----------------------------------*\
 // PARTIALS
