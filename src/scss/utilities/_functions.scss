@@ -1,0 +1,94 @@
+/*! helpers - functions v0.0.1 */
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// Danger Zone
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// ================================
+// Calculations
+// ================================
+
+// Using short names for functions that will be used often:
+// thesassway.com/advanced/pure-sass-functions
+
+// All shorthand calculations will be indicated with a beginning "c"
+// Examples:
+// Calculate em, "ce"
+// Calculate percent, "cp"
+
+
+// Calculate em sizes
+// ================================
+
+@function ce($target, $context: $body-font-size) {
+  @return calc-em-size($target, $context)
+}
+
+@function calc-em-size($target, $context: $body-font-size) {
+  $strip-target: su($target);
+  $strip-context: su($context);
+  @return ($strip-target / $strip-context) * 1em;
+}
+
+
+// Calculate rem sizes
+// ================================
+
+@function cre($target, $context: 16) {
+  @return calc-rem-size($target, $context)
+}
+
+@function calc-rem-size($target, $context: 16) {
+  $strip-target: su($target);
+  $strip-context: su($context);
+  @return ($strip-target / $strip-context) * 1rem;
+}
+
+
+// Calculate percentages
+// ================================
+
+@function cp($target, $context) {
+  @return calc-percent($target, $context)
+}
+
+@function calc-percent($target, $context) {
+  $strip-target: su($target);
+  $strip-context: su($context);
+  @return ($target / $context) * 100%;
+}
+
+
+// ================================
+// Strip Units
+// ================================
+
+// Strip the units from a value:
+// css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing
+
+@function su($num) {
+  @return strip-unit($num);
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+
+// ================================
+// Safe RGBA (for Live Demo)
+// ================================
+
+@function safe-rgba($color, $alpha: 1.0) {
+  @if (str-slice(#{$color}, 0, 7) == 'rgb(var') {
+    $parsed: str-slice(#{$color}, 5, -2);
+
+    @return unquote("rgba(#{$parsed}, #{$alpha})");
+  } @else {
+    @return rgba($color, $alpha);
+  }
+}
+
+@function safe-rgb($color) {
+  @return unquote("rgb(#{$color})");
+}
