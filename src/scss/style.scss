@@ -1,22 +1,28 @@
 //----------------------------------*\
-// SCSS MIXINS
+// SCSS MIXINS AND FUNCTIONS
 //----------------------------------*/
 
-@import 'mixins/_position.scss';
+@import 'modules/_vars.scss';
+@import 'utilities/_position.scss';
+@import 'utilities/_functions.scss';
+@import 'utilities/_utility.scss';
 
 //----------------------------------*\
 // CONFIG MODULES
 //----------------------------------*/
 
 // Config modules
-@import 'modules/_vars.scss';
 @import 'modules/_clearfix.scss';
 @import 'modules/_defaults.scss';
-@import 'modules/_normalize.scss';
+
+// Normalise replaced with Bootstrap Reboot
+@import 'vendor/_bootstrap-reboot.scss';
+
 //----------------------------------*\
 // PARTIALS
 //----------------------------------*/
 
+@import 'partials/_layout.scss';
 @import 'partials/_header.scss';
 @import 'partials/_nav.scss';
 @import 'partials/_sidebar.scss';
