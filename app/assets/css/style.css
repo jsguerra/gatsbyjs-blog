@@ -3,8 +3,8 @@
 .compartment {
   position: relative;
   margin: 0 auto;
-  max-width: 73.75em;
-  max-width: 73.75rem; }
+  max-width: 68.75em;
+  max-width: 68.75rem; }
 
 .clear:before, .clear:after {
   content: ' ';
@@ -293,18 +293,64 @@ template {
 .container {
   position: relative;
   margin: 0 auto;
-  max-width: 73.75em;
-  max-width: 73.75rem; }
+  max-width: 68.75em;
+  max-width: 68.75rem; }
 
 .header {
-  background-color: #eff1f5;
   padding: 0.625rem 0; }
 
 .nav ul {
   list-style: none; }
 
+.main {
+  padding: 1.25rem 0 5rem; }
+
+.bio-section {
+  position: relative;
+  background-color: #eff1f5;
+  padding: 2.5rem 0;
+  margin-bottom: 3.75rem; }
+  .bio-section::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: #eff1f5;
+    -ms-transform: rotate(1deg);
+        transform: rotate(1deg);
+    -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+    z-index: -1; }
+
+.bio-picture {
+  float: left;
+  margin-right: 3.125rem;
+  -ms-transform: skewY(-2deg) rotate(-1deg);
+      transform: skewY(-2deg) rotate(-1deg); }
+
+.col-2 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .col-2 > div {
+    -ms-flex: 1;
+        flex: 1;
+    margin-right: 2.5rem; }
+    .col-2 > div:last-child {
+      margin-right: 0; }
+
 .footer {
-  text-align: center; }
+  position: relative;
+  padding: 1.875rem 0;
+  text-align: center;
+  background-color: #2e3036;
+  color: white; }
 
 @font-face {
   font-family: 'Font-Name';
