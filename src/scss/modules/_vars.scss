@@ -2,10 +2,11 @@
 // Text Properties
 // ================================
 
-// Enter the values found from body copy
+$body-font-size: 1.063em !default;
+$body-line-height: 1.5 !default;
 
-$body-font-size: 16px !default;
-$body-line-height: 27px !default;
+$montserat: 'Montserrat', "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif;
+$opensans: 'Open Sans', sans-serif;
 
 
 // =====================
@@ -16,6 +17,7 @@ $darken : darken(#F7F6F0 , 30%);
 $back: darken(#F7F6F0, 40%);
 
 $athens-gray: #eff1f5;
+$mine-shaft: #333333;
 
 
 // =====================
