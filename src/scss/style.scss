@@ -11,12 +11,17 @@
 // CONFIG MODULES
 //----------------------------------*/
 
+// Normalise replaced with Bootstrap Reboot
+// ==========================================
+@import 'vendor/_bootstrap-reboot.scss';
+
 // Config modules
 @import 'modules/_clearfix.scss';
 @import 'modules/_defaults.scss';
 
-// Normalise replaced with Bootstrap Reboot
-@import 'vendor/_bootstrap-reboot.scss';
+// Elements include headers and paragrapsh
+// ==========================================
+@import 'modules/_elements.scss';
 
 //----------------------------------*\
 // PARTIALS
