@@ -353,26 +353,10 @@ a:hover {
   background-color: #eff1f5;
   padding: 2.5rem 0;
   margin-bottom: 3.75rem; }
-  .bio-section::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2.5rem;
-    background-color: #eff1f5;
-    -ms-transform: rotate(1deg);
-        transform: rotate(1deg);
-    -ms-transform-origin: 0 0;
-        transform-origin: 0 0;
-    z-index: -1; }
 
 .bio-picture {
   float: left;
-  margin-right: 3.125rem;
-  -ms-transform: skewY(-2deg) rotate(-1deg);
-      transform: skewY(-2deg) rotate(-1deg); }
+  margin-right: 1.25rem; }
 
 .col-2 {
   display: -ms-flexbox;
