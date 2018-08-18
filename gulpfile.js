@@ -38,15 +38,36 @@ gulp.task('minify', function(){
 // Compile Sass
 gulp.task('sass', function(){
   gulp.src('src/sass/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcepmaps.init())
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }).on('error', sass.logError))
+    .pipe(postcss([
+      autoprefixer('last 2 versions', '> 1%')
+    ]))
+    .pipe(sourcemaps.write(scss + 'maps'))
     .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('default', ['copyHtml', 'imageMin', 'sass', 'minify']);
+// Sync browser with changes
+gulp.task('browser-sync', function() {
+  browserSync.init(null, {
+    server: {
+      baseDir: "src"
+    }
+  });
+});
 
-gulp.task('watch', function(){
+gulp.task('watch', ['browser-sync'], function(){
   gulp.watch('src/js/*.js', ['minify']);
   gulp.watch('src/images/*', ['imageMin']);
   gulp.watch('src/sass/*.scss', ['sass']);
   gulp.watch('src/*.html', ['copyHtml']);
 });
+
+gulp.task('bs-reload', function () {
+  browserSync.reload();
+});
+
+gulp.task('default', ['watch']);
+gulp.task('build', ['copyHtml', 'imageMin', 'sass', 'minify']);
