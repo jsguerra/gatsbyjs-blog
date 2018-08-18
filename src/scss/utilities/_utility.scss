@@ -1,0 +1,321 @@
+/*! helpers - utility v0.0.1 */
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// Danger Zone
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// ================================
+// Breakpoint
+// ================================
+
+// http://jakearchibald.github.io/sass-ie/
+
+// Example Usage:
+// .element {
+//   @include breakpoint($bp-medium) {}
+// }
+
+@mixin breakpoint($flex-pivot) {
+
+  @if $bp-in-ems {
+
+    @media (min-width: ce(su($flex-pivot))) {
+      @content;
+    }
+
+  }
+  @else {
+
+    @media (min-width: $flex-pivot) {
+      @content;
+    }
+
+  }
+
+}
+
+@mixin maxbp($flex-pivot) {
+
+    @if $bp-in-ems {
+
+      @media (max-width: ce(su($flex-pivot), 16) - em(1, 16)) {
+        @content;
+      }
+
+    }
+    @else {
+
+      @media (max-width: $flex-pivot - 1px) {
+        @content;
+      }
+
+    }
+
+}
+
+
+// PX to REM - Usage: font-size: rem(37px);
+@function rem($px, $base: $base-font-size) {
+  @return ($px / $base) * 1rem;
+}
+
+
+
+
+// ================================
+// Modernizr
+// ================================
+
+//www.sitepoint.com/scaling-values-across-breakpoints-using-sass/
+
+// Modernizr fallbacks
+// ================================
+
+// Modernizr mixin to create .modernizr selector:
+// codepen.io/sturobson/pen/xcdha
+
+// Example usage:
+// .selector {
+//   @include modernizr(cssanimations) {
+//     left: 40em;
+//   }
+//   @include modernizr(cssanimations, false) {
+//     background: red;
+//   }
+// }
+
+@mixin modernizr($property, $support: true) {
+
+  @if $support == true {
+
+    .#{$property} & {
+
+      @content;
+
+    }
+
+  }
+
+  @else {
+
+    .no-#{$property} & {
+
+      @content;
+
+    }
+
+  }
+
+}
+
+
+
+
+// ================================
+// Compartment
+// ================================
+
+// Example usage:
+// .sectioned-container {
+//   @include compartment;
+// }
+
+@mixin compartment($value: $boundry) {
+  position: relative;
+  margin: 0 auto;
+  max-width: ce($value);
+  max-width: cre($value);
+}
+
+.compartment,
+%compartment {
+  @include compartment;
+}
+
+
+
+
+// ================================
+// Centering Position Mixin
+// ================================
+
+@mixin x-center {
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+@mixin y-center {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+@mixin x-y-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+
+
+
+// ================================
+// List Reset
+// ================================
+
+// Example usage:
+// nav {
+//   @include list-reset;
+// }
+// nav ul {
+//   @include list-reset;
+// }
+// ul { @include list-rest}
+
+@mixin list-reset {
+
+  &, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+    li {
+       margin: 0;
+       padding: 0;
+    }
+
+}
+
+
+
+
+// ================================
+// Button Reset
+// ================================
+
+// Example usage:
+// .trigger {
+//   @include button-reset;
+// }
+
+@mixin button-reset($complete: true) {
+  border: 0;
+  background: none;
+
+  @if $complete {
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+@mixin justify(){
+	text-align: justify;
+	font-size: 0.1px;
+
+	> li{
+		display: inline-block;
+	}
+
+	&:after{
+		content: "";
+		display: inline-block;
+		width: 100%;
+	}
+
+}
+
+// ================================
+// Clearfix
+// ================================
+
+// Example Usage:
+// .contains-floats {
+//   @include clear;
+// }
+
+@mixin clear {
+  zoom: 1;
+
+  &:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+
+}
+
+
+// ================================
+// Placeholders Styling
+// ================================
+// Usage:
+// .foo {
+//   @include placeholder(#HEX)
+// }
+//
+// @include placeholder(#HEX)
+
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder($color:$placeholder) {
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  :-moz-placeholder {
+    color: $color;
+  }
+
+  ::-moz-placeholder {
+    color: $color;
+  }
+
+  :-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+
+// ================================
+// Minimum width targeting
+// ================================
+
+@mixin column-narrow {
+  .fsBannerLeft &, 
+  .fsBannerRight &, 
+  .fsStyleOneThird &,
+  .fsTwoColumnLayout > .fsDiv &,
+  .fsThreeColumnLayout > .fsDiv &,
+  .fsFourColumnLayout > .fsDiv &,
+  .wide-left > .fsStyleColumn-last &,
+  .wide-right > .fsStyleColumn-1 & {
+    @content;
+  }
+}
+
+@mixin layout-narrow {
+  .fsHasLeftBanner &, 
+  .fsHasRightBanner &, 
+  .fsHasTwoColumnWideLeftLayout &,
+  .fsHasTwoColumnWideRightLayout & {
+    @content;
+  }
+}
+
+// @mixin all-default-buttons {
+//   &.fs_style_18,
+//   &.fs_style_19,
+//   &.fs_style_20 {
+//     @content;
+//   }
+// }
+

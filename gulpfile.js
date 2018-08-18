@@ -1,70 +1,72 @@
-// Setup constants
-const gulp = require('gulp'),
-      imagemin = require('gulp-imagemin'),
-      uglify = require('gulp-uglify'),
-      sass = require('gulp-sass'),
-      sourcemaps = require('gulp-sourcemaps'),
-      autoprefixer = require('autoprefixer'),
-      postcss = require('gulp-postcss'),
-      browserSync = require('browser-sync');
+var gulp = require('gulp'),
+    gutil = require('gulp-util'),
+    sass = require('gulp-sass'),
+    browserSync = require('browser-sync'),
+    autoprefixer = require('gulp-autoprefixer'),
+    uglify = require('gulp-uglify'),
+    jshint = require('gulp-jshint'),
+    header  = require('gulp-header'),
+    rename = require('gulp-rename'),
+    cssnano = require('gulp-cssnano'),
+    sourcemaps = require('gulp-sourcemaps'),
+    package = require('./package.json');
 
-/*
-  -- TOP LEVEL FUNCTIONS --
-  gulp.task - Define tasks
-  gulp.src - Point to files to use
-  gulp.dest - Points to folder to output
-  gulp.watch - Watch files and folders for changes
-*/
 
-// Copy All HTML files
-gulp.task('copyHtml', function(){
-  gulp.src('src/*.html')
-    .pipe(gulp.dest('dist'));
+var banner = [
+  '/*!\n' +
+  ' * <%= package.name %>\n' +
+  ' * <%= package.title %>\n' +
+  ' * <%= package.url %>\n' +
+  ' * @author <%= package.author %>\n' +
+  ' * @version <%= package.version %>\n' +
+  ' * Copyright ' + new Date().getFullYear() + '. <%= package.license %> licensed.\n' +
+  ' */',
+  '\n'
+].join('');
+
+gulp.task('css', function () {
+    return gulp.src('src/scss/style.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer('last 2 version'))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(cssnano())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(header(banner, { package : package }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('dist/css'))
+    .pipe(browserSync.reload({stream:true}));
 });
 
-// Optimize Images
-gulp.task('imageMin', () =>
-	gulp.src('src/images/*')
-  .pipe(imagemin())
-  .pipe(gulp.dest('dist/images'))
-);
-
-// Minify JS
-gulp.task('minify', function(){
-  gulp.src('src/js/*.js')
+gulp.task('js',function(){
+  gulp.src('src/js/main.js')
+    .pipe(sourcemaps.init())
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('default'))
+    .pipe(header(banner, { package : package }))
+    .pipe(gulp.dest('dist/js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js'));
+    .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+    .pipe(header(banner, { package : package }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('dist/js'))
+    .pipe(browserSync.reload({stream:true, once: true}));
 });
 
-// Compile Sass
-gulp.task('sass', function(){
-  gulp.src('src/sass/*.scss')
-    .pipe(sourcepmaps.init())
-    .pipe(sass({
-      outputStyle: 'expanded'
-    }).on('error', sass.logError))
-    .pipe(postcss([
-      autoprefixer('last 2 versions', '> 1%')
-    ]))
-    .pipe(sourcemaps.write(scss + 'maps'))
-    .pipe(gulp.dest('dist/css'));
-});
-
-// Sync browser with changes
 gulp.task('browser-sync', function() {
-  browserSync.init(null, {
-    server: {
-      baseDir: "src"
-    }
-  });
+    browserSync.init(null, {
+        server: {
+            baseDir: "dist"
+        }
+    });
+});
+gulp.task('bs-reload', function () {
+    browserSync.reload();
 });
 
-gulp.task('watch', ['browser-sync'], function(){
-  gulp.watch('src/js/*.js', ['minify']);
-  gulp.watch('src/images/*', ['imageMin']);
-  gulp.watch('src/sass/*.scss', ['sass']);
-  gulp.watch('src/*.html', ['copyHtml']);
-  gulp.watch('src/*').on('change', browserSync.reload);
+gulp.task('default', ['css', 'js', 'browser-sync'], function () {
+    gulp.watch("src/scss/**/*.scss", ['css']);
+    gulp.watch("src/js/*.js", ['js']);
+    gulp.watch("dist/*.html", ['bs-reload']);
 });
-
-gulp.task('default', ['watch']);
