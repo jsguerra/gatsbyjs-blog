@@ -1,3 +1,4 @@
+// Setup constants
 const gulp = require('gulp'),
       imagemin = require('gulp-imagemin'),
       uglify = require('gulp-uglify'),
@@ -63,11 +64,7 @@ gulp.task('watch', ['browser-sync'], function(){
   gulp.watch('src/images/*', ['imageMin']);
   gulp.watch('src/sass/*.scss', ['sass']);
   gulp.watch('src/*.html', ['copyHtml']);
-});
-
-gulp.task('bs-reload', function () {
-  browserSync.reload();
+  gulp.watch('src/*').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['watch']);
-gulp.task('build', ['copyHtml', 'imageMin', 'sass', 'minify']);
