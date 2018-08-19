@@ -1,16 +1,18 @@
 // Base font families
 // ==================================
-$montserat: 'Montserrat', sans-serif;
-$opensans: 'Open Sans', sans-serif;;
+$headings-font: 'Raleway', sans-serif;
+$body-font: 'Open Sans', sans-serif;
 
-$body-font-family: $opensans;
-$body-font-size: 16px;
+$body-font-family: $body-font;
+$body-font-size: cre(17);
 $body-line-height: 1.5;
 
 
 
 // Colour Palette
 // ==================================
+$athens-gray: #eaecef;
+$shuttle-gray: #586069;
 $shark: #24292e;
 
 

@@ -278,24 +278,40 @@ template {
 .compartment {
   position: relative;
   margin: 0 auto;
-  max-width: 68.75em;
+  max-width: 64.70588em;
   max-width: 68.75rem; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #24292e; }
 
 .container {
   position: relative;
   margin: 0 auto;
-  max-width: 68.75em;
+  max-width: 64.70588em;
   max-width: 68.75rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600; }
 
 .site-header {
   background-color: #24292e;
-  padding: 0.625rem 0;
-  margin-bottom: 2.5rem; }
+  width: 100%;
+  padding: 0.9375rem 0;
+  margin-bottom: 2.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
 
 .header-container {
   position: relative;
   margin: 0 auto;
-  max-width: 68.75em;
+  max-width: 64.70588em;
   max-width: 68.75rem;
   display: -ms-flexbox;
   display: flex; }
@@ -303,3 +319,34 @@ template {
     color: white; }
   .header-container .logo {
     margin-right: auto; }
+
+.site-nav ul, .site-nav ul ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.site-nav ul li {
+  margin: 0;
+  padding: 0; }
+
+.main {
+  margin: 6.25rem 0 2.5rem; }
+
+.bio-summary,
+.col-2 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .bio-summary > div,
+  .col-2 > div {
+    -ms-flex: 1;
+        flex: 1; }
+
+.site-footer {
+  font-size: 0.82353em;
+  padding: 0.625rem 0;
+  text-align: center;
+  border-top: 1px solid #eaecef; }

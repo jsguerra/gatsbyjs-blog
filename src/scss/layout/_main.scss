@@ -1,0 +1,14 @@
+.main {
+  margin: cre(100) 0 cre(40);
+}
+
+.bio-summary,
+.col-2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  > div {
+    flex: 1;
+  }
+}
