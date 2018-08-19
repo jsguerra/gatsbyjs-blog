@@ -1,0 +1,22 @@
+.container {
+  @include compartment;
+}
+
+.site-header {  
+  background-color: $shark;
+  padding: cre(10) 0;
+  margin-bottom: cre(40);
+}
+
+.header-container {
+  @include compartment;
+  display: flex;
+
+  a {
+    color: white;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+}
