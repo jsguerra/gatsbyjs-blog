@@ -1,0 +1,11 @@
+body {
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  color: $shark;
+}
+
+.container {
+  @include compartment;
+}
+  
