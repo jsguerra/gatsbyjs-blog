@@ -283,39 +283,3 @@
     color: $color;
   }
 }
-
-
-// ================================
-// Minimum width targeting
-// ================================
-
-@mixin column-narrow {
-  .fsBannerLeft &, 
-  .fsBannerRight &, 
-  .fsStyleOneThird &,
-  .fsTwoColumnLayout > .fsDiv &,
-  .fsThreeColumnLayout > .fsDiv &,
-  .fsFourColumnLayout > .fsDiv &,
-  .wide-left > .fsStyleColumn-last &,
-  .wide-right > .fsStyleColumn-1 & {
-    @content;
-  }
-}
-
-@mixin layout-narrow {
-  .fsHasLeftBanner &, 
-  .fsHasRightBanner &, 
-  .fsHasTwoColumnWideLeftLayout &,
-  .fsHasTwoColumnWideRightLayout & {
-    @content;
-  }
-}
-
-// @mixin all-default-buttons {
-//   &.fs_style_18,
-//   &.fs_style_19,
-//   &.fs_style_20 {
-//     @content;
-//   }
-// }
-
