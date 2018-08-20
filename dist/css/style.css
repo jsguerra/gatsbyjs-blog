@@ -345,10 +345,23 @@ h1, h2, h3, h4, h5, h6 {
       flex-flow: row wrap;
   -ms-flex-pack: justify;
       justify-content: space-between; }
-  .bio-summary > div,
-  .col-2 > div {
-    -ms-flex: 1;
-        flex: 1; }
+
+.bio-profile {
+  width: 100%;
+  max-width: 18.75rem; }
+
+.bio-info {
+  width: calc(100% - 340px); }
+
+.projects-container {
+  -ms-flex: 1;
+      flex: 1;
+  max-width: calc(100% - 340px); }
+
+.articles-container {
+  -ms-flex: 1;
+      flex: 1;
+  max-width: 18.75rem; }
 
 .site-footer {
   font-size: 0.82353em;
