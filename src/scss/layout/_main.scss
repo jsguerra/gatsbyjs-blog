@@ -1,5 +1,11 @@
 .main {
-  margin: cre(100) 0 cre(40);
+  margin: cre(50) 0 cre(40);
+}
+
+.bio-section {
+  background-color: $aqua-haze;
+  margin-bottom: $gutter * 4;
+  padding: $gutter * 3 0;
 }
 
 .bio-summary,
