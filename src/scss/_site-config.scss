@@ -4,7 +4,7 @@ $headings-font: 'Raleway', sans-serif;
 $body-font: 'Open Sans', sans-serif;
 
 $body-font-family: $body-font;
-$body-font-size: cre(17);
+$body-font-size: 17px;
 $body-line-height: 1.5;
 
 
@@ -12,6 +12,7 @@ $body-line-height: 1.5;
 // Colour Palette
 // ==================================
 $athens-gray: #eaecef;
+$aqua-haze: #f2f5f8;
 $shuttle-gray: #586069;
 $shark: #24292e;
 
@@ -20,3 +21,4 @@ $shark: #24292e;
 // Breakpoints and boundaries
 // ==================================
 $boundry: 1100px;
+$gutter: 20px;
