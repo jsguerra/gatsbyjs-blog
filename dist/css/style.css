@@ -330,7 +330,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0; }
 
 .main {
-  margin: 6.25rem 0 2.5rem; }
+  margin: 3.125rem 0 2.5rem; }
+
+.bio-section {
+  background-color: #f2f5f8;
+  margin-bottom: 80px;
+  padding: 60px 0; }
 
 .bio-summary,
 .col-2 {
