@@ -13,8 +13,31 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
 
-  > div {
-    flex: 1;
-  }
+// The Bio section
+// ================================
+.bio-profile {
+  width: 100%;
+  max-width: cre(300);
+}
+
+.bio-info {
+  width: calc(100% - 340px);
+}
+
+
+// The Projects section
+// ================================
+.projects-container {
+  flex: 1;
+  max-width: calc(100% - 340px);
+}
+
+
+// The Recent Articles section
+// ================================
+.articles-container {
+  flex: 1;
+  max-width: cre(300);
 }
