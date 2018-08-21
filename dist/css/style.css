@@ -278,8 +278,8 @@ template {
 .compartment {
   position: relative;
   margin: 0 auto;
-  max-width: 64.70588em;
-  max-width: 68.75rem; }
+  max-width: 56.47059em;
+  max-width: 60rem; }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -290,15 +290,20 @@ body {
 .container {
   position: relative;
   margin: 0 auto;
-  max-width: 64.70588em;
-  max-width: 68.75rem; }
+  max-width: 56.47059em;
+  max-width: 60rem; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
   font-weight: 600; }
 
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto; }
+
 .site-header {
-  background-color: #24292e;
+  background-color: #2980b9;
   width: 100%;
   padding: 0.9375rem 0;
   margin-bottom: 2.5rem;
@@ -311,8 +316,8 @@ h1, h2, h3, h4, h5, h6 {
 .header-container {
   position: relative;
   margin: 0 auto;
-  max-width: 64.70588em;
-  max-width: 68.75rem;
+  max-width: 56.47059em;
+  max-width: 60rem;
   display: -ms-flexbox;
   display: flex; }
   .header-container a {
