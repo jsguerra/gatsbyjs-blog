@@ -351,6 +351,9 @@ img {
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
+.col-2 {
+  margin-bottom: 5rem; }
+
 .bio-profile {
   width: 100%;
   max-width: 18.75rem; }
