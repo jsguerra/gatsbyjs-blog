@@ -1,10 +1,11 @@
 .main {
-  margin: cre(50) 0 cre(40);
+  @include compartment;
+  margin: cre(50) auto;
+  background-color: white;
 }
 
 .bio-section {
   background-color: $aqua-haze;
-  margin-bottom: $gutter * 4;
   padding: $gutter * 3 0;
 }
 
