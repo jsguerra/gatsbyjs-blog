@@ -278,20 +278,21 @@ template {
 .compartment {
   position: relative;
   margin: 0 auto;
-  max-width: 56.47059em;
-  max-width: 60rem; }
+  max-width: 45em;
+  max-width: 47.8125rem; }
 
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 17px;
   line-height: 1.5;
-  color: #24292e; }
+  color: #24292e;
+  background: linear-gradient(135deg, #1e5799 0%, #7db9e8 100%); }
 
 .container {
   position: relative;
   margin: 0 auto;
-  max-width: 56.47059em;
-  max-width: 60rem; }
+  max-width: 45em;
+  max-width: 47.8125rem; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
@@ -316,8 +317,8 @@ img {
 .header-container {
   position: relative;
   margin: 0 auto;
-  max-width: 56.47059em;
-  max-width: 60rem;
+  max-width: 45em;
+  max-width: 47.8125rem;
   display: -ms-flexbox;
   display: flex; }
   .header-container a {
@@ -325,21 +326,26 @@ img {
   .header-container .logo {
     margin-right: auto; }
 
-.site-nav ul, .site-nav ul ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-.site-nav ul li {
-  margin: 0;
-  padding: 0; }
+.site-nav {
+  background-color: #827fc9; }
+  .site-nav ul, .site-nav ul ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .site-nav ul li {
+    margin: 0;
+    padding: 0; }
 
 .main {
-  margin: 3.125rem 0 2.5rem; }
+  position: relative;
+  margin: 0 auto;
+  max-width: 45em;
+  max-width: 47.8125rem;
+  margin: 3.125rem auto;
+  background-color: white; }
 
 .bio-section {
   background-color: #f2f5f8;
-  margin-bottom: 80px;
   padding: 60px 0; }
 
 .bio-summary,
