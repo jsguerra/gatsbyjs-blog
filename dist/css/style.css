@@ -345,10 +345,8 @@ img {
   background-color: white; }
 
 .bio-section {
-  background-color: #f2f5f8;
-  padding: 60px 0; }
+  background-color: #f2f5f8; }
 
-.bio-summary,
 .col-2 {
   display: -ms-flexbox;
   display: flex;
@@ -361,11 +359,7 @@ img {
   margin-bottom: 5rem; }
 
 .bio-profile {
-  width: 100%;
-  max-width: 18.75rem; }
-
-.bio-info {
-  width: calc(100% - 340px); }
+  width: 100%; }
 
 .projects-container {
   -ms-flex: 1;
