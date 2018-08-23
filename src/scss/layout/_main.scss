@@ -6,10 +6,10 @@
 
 .bio-section {
   background-color: $aqua-haze;
-  padding: $gutter * 3 0;
+  //padding: $gutter * 3 0;
 }
 
-.bio-summary,
+
 .col-2 {
   display: flex;
   flex-flow: row wrap;
@@ -24,11 +24,11 @@
 // ================================
 .bio-profile {
   width: 100%;
-  max-width: cre(300);
+  // max-width: cre(300);
 }
 
 .bio-info {
-  width: calc(100% - 340px);
+  // width: calc(100% - 340px);
 }
 
 
