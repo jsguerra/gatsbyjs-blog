@@ -9,8 +9,8 @@
 
 // Mixins and functions
 // ==========================================
-@import 'utilities/_functions';
-@import 'utilities/utility';
+@import 'utilities/_functions',
+        'utilities/utility';
 
 
 // Global site settings
@@ -20,13 +20,14 @@
 
 // Elements: paragraphs, lits, buttons
 // ==========================================
-@import 'elements/headings';
-@import 'elements/images';
+@import 'elements/headings',
+        'elements/images';
 
 
 // Layout sections
 // ==========================================
-@import 'layout/header';
-@import 'layout/navigation';
-@import 'layout/main';
-@import 'layout/footer';
+@import 'layout/header',
+        'layout/navigation',
+        'layout/main',
+        'layout/tabs',
+        'layout/footer';
