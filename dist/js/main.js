@@ -25,7 +25,7 @@
       clickedTab.classList.add('active');
       tabClickEvent.preventDefault();
 
-      var myContentPanes = document.querySelectorAll('.tab-pane');
+      var myContentPanes = document.querySelectorAll('.tab-panel');
 
       for (i = 0; i < myContentPanes.length; i++) {
         myContentPanes[i].classList.remove('active');

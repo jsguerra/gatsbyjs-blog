@@ -27,7 +27,10 @@
 // Layout sections
 // ==========================================
 @import 'layout/header',
-        'layout/navigation',
         'layout/main',
-        'layout/tabs',
         'layout/footer';
+
+// Components
+// ==========================================
+@import 'components/navigation',
+        'components/tabs';
