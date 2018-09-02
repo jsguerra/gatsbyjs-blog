@@ -366,6 +366,13 @@ h1, h2, h3, h4, h5, h6 {
       flex: 1;
   max-width: 18.75rem; }
 
+.nav-tabs {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.625rem 20px; }
+  .nav-tabs a {
+    color: white; }
+
 .site-footer {
   font-size: 0.82353em;
   padding: 0.625rem 0;
