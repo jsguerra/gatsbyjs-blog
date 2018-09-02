@@ -1,0 +1,29 @@
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+
+  li {
+
+  }
+
+  a {
+    display: inline-block;
+    color: white;
+    padding: cre(10) $gutter;
+  }
+}
+
+.profile-body {
+  display: flex;
+  overflow: hidden;
+}
+
+.tab-panel {
+  display: none;
+  padding: $gutter;
+
+  &.active {
+    display: inline;
+  }
+}
