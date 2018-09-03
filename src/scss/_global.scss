@@ -5,8 +5,4 @@ body {
   color: $shark;
   background: linear-gradient(135deg, #1e5799 0%,#7db9e8 100%);
 }
-
-.container {
-  @include compartment;
-}
   
