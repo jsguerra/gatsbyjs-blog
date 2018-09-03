@@ -7,21 +7,31 @@
 
   }
 
+  .active {
+    background-color: darken($blue-marguerite, 5%);
+  }
+
   a {
     display: inline-block;
     color: white;
     padding: cre(10) $gutter;
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
 .profile-body {
   display: flex;
   overflow: hidden;
+  background-color: white;
 }
 
 .tab-panel {
   display: none;
-  padding: $gutter;
+  padding: $gutter $gutter * 2;
 
   &.active {
     display: inline;
