@@ -278,8 +278,8 @@ template {
 .compartment {
   position: relative;
   margin: 0 auto;
-  max-width: 52.94118em;
-  max-width: 56.25rem; }
+  max-width: 41.17647em;
+  max-width: 43.75rem; }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -293,17 +293,35 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600; }
 
 .profile-header {
+  position: relative;
   padding: 40px 20px;
   text-align: center;
   background-color: #9491d1; }
   .profile-header .profile-image img {
     border-radius: 100%; }
+  .profile-header .profile-social {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 10px; }
+    .profile-header .profile-social, .profile-header .profile-social ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+    .profile-header .profile-social li {
+      margin: 0;
+      padding: 0; }
+    .profile-header .profile-social li {
+      margin-right: 0.625rem; }
 
 .main {
   margin: 3.125rem auto; }
 
 .container {
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
