@@ -1,9 +1,23 @@
 .profile-header {
+  position: relative;
   padding: $gutter * 2 $gutter;
   text-align: center;
   background-color: lighten($blue-marguerite, 5%);
 
   .profile-image img {
     border-radius: 100%;
+  }
+
+  .profile-social {
+    @include list-reset;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: $gutter;
+    right: $gutter / 2;
+
+    li {
+      margin-right: cre(10);
+    }
   }
 }
