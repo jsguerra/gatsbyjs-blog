@@ -31,7 +31,7 @@
 
 .tab-panel {
   display: none;
-  padding: $gutter $gutter * 2;
+  padding: $gutter * 2 $gutter * 2.5 $gutter;
 
   &.active {
     display: inline;

@@ -273,6 +273,47 @@ template {
   display: none !important; }
 
 /*# sourceMappingURL=bootstrap-reboot.css.map */
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?hspmpw");
+  src: url("fonts/icomoon.eot?hspmpw#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?hspmpw") format("truetype"), url("fonts/icomoon.woff?hspmpw") format("woff"), url("fonts/icomoon.svg?hspmpw#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-blog:before {
+  content: "\e904"; }
+
+.icon-profile:before {
+  content: "\e923"; }
+
+.icon-email:before {
+  content: "\e945"; }
+
+.icon-user:before {
+  content: "\e976"; }
+
+.icon-portfolio:before {
+  content: "\e9ae"; }
+
+.icon-github:before {
+  content: "\eab0"; }
+
+.icon-linkedin:before {
+  content: "\eaca"; }
+
 /*! helpers - functions v0.0.1 */
 /*! helpers - utility v0.0.1 */
 .compartment {
@@ -294,11 +335,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .profile-header {
   position: relative;
-  padding: 40px 20px;
+  padding: 40px 20px 10px;
   text-align: center;
   background-color: #9491d1; }
   .profile-header .profile-image img {
     border-radius: 100%; }
+  .profile-header h1 {
+    margin-bottom: 0; }
   .profile-header .profile-social {
     display: -ms-flexbox;
     display: flex;
@@ -316,6 +359,11 @@ h1, h2, h3, h4, h5, h6 {
       padding: 0; }
     .profile-header .profile-social li {
       margin-right: 0.625rem; }
+    .profile-header .profile-social a {
+      color: white;
+      text-decoration: none; }
+      .profile-header .profile-social a:hover {
+        color: black; }
 
 .main {
   margin: 3.125rem auto; }
@@ -367,6 +415,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .tab-panel {
   display: none;
-  padding: 20px 40px; }
+  padding: 40px 50px 20px; }
   .tab-panel.active {
     display: inline; }

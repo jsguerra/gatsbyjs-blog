@@ -1,11 +1,15 @@
 .profile-header {
   position: relative;
-  padding: $gutter * 2 $gutter;
+  padding: $gutter * 2 $gutter $gutter / 2;
   text-align: center;
   background-color: lighten($blue-marguerite, 5%);
 
   .profile-image img {
     border-radius: 100%;
+  }
+
+  h1 {
+    margin-bottom: 0;
   }
 
   .profile-social {
@@ -18,6 +22,15 @@
 
     li {
       margin-right: cre(10);
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: black;
+      }
     }
   }
 }
