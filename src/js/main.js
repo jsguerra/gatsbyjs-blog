@@ -1,38 +1,38 @@
 (function (window, document, undefined) {
   'use strict';
 
-  window.addEventListener('load', function() {
-    // store tabs variable
-    var myTabs = document.querySelectorAll('ul.nav-tabs > li'),
-        i = 0;
-    
-    function myTabClicks(tabClickEvent) {
+  // store tabs variable
+  //=============================
+  var myTabs = document.querySelectorAll('ul.nav-tabs > li'),
+      myContentPanes = document.querySelectorAll('.tab-panel'),
+      i = 0;
+  
+  // My Tab Function
+  function myTabClicks(tabClickEvent) {
+    tabClickEvent.preventDefault();
 
-      for (i = 0; i < myTabs.length; i++) {
-        myTabs[i].classList.remove('active');
-      }
-
-      var clickedTab = tabClickEvent.currentTarget;
-      
-      clickedTab.classList.add('active');
-      tabClickEvent.preventDefault();
-
-      var myContentPanes = document.querySelectorAll('.tab-panel');
-
-      for (i = 0; i < myContentPanes.length; i++) {
-        myContentPanes[i].classList.remove('active');
-      }
-
-      var anchorReference = tabClickEvent.target;
-      var activePaneId = anchorReference.getAttribute('href');
-      var activePane = document.querySelector(activePaneId);
-
-      activePane.classList.add('active');
-    } // End of myTabClicks
-
+    // Count the number of tabs and get the index
+    // ==============================================
     for (i = 0; i < myTabs.length; i++) {
-      myTabs[i].addEventListener('click', myTabClicks);
+      myTabs[i].classList.remove('active');
+      myContentPanes[i].classList.remove('active');
     }
-  });
+
+    var clickedTab = tabClickEvent.currentTarget;
+    
+    clickedTab.classList.add('active');
+
+    var anchorReference = tabClickEvent.target,
+        activePaneId = anchorReference.getAttribute('href'),
+        activePane = document.querySelector(activePaneId);
+
+        console.log(anchorReference, activePaneId, activePane);
+
+    activePane.classList.add('active');
+  } // End of myTabClicks
+
+  for (i = 0; i < myTabs.length; i++) {
+    myTabs[i].addEventListener('click', myTabClicks);
+  }
 
 })(window, document);
