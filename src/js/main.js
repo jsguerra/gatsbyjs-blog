@@ -13,7 +13,7 @@
       }
 
       var clickedTab = tabClickEvent.currentTarget;
-
+      
       clickedTab.classList.add('active');
       tabClickEvent.preventDefault();
 
