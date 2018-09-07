@@ -1,6 +1,12 @@
 (function (window, document, undefined) {
   'use strict';
 
+/*
+Research this recommended method targeting anchor linkgs instead of the tabs
+https://stackoverflow.com/questions/29223502/how-to-get-href-of-anchor-when-the-event-target-is-htmlimageelement/29223563
+*/
+
+
   // store tabs variable
   //=============================
   var myTabs = document.querySelectorAll('ul.nav-tabs > li'),
