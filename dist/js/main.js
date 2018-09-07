@@ -34,8 +34,6 @@
         activePaneId = anchorReference.getAttribute('href'),
         activePane = document.querySelector(activePaneId);
 
-        console.log(anchorReference, activePaneId, activePane);
-
     activePane.classList.add('active');
   } // End of myTabClicks
 
