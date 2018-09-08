@@ -18,7 +18,8 @@ https://stackoverflow.com/questions/29223502/how-to-get-href-of-anchor-when-the-
   // store tabs variable
   //=============================
   var myTabs = document.querySelectorAll('ul.nav-tabs > li'),
-      myContentPanes = document.querySelectorAll('.tab-panel'),
+      myTabPanels = document.querySelectorAll('.tab-panel'),
+      myTabAnchors = document.querySelectorAll('ul.nav-tabs li > a'),
       i = 0;
   
   // My Tab Function
@@ -29,18 +30,26 @@ https://stackoverflow.com/questions/29223502/how-to-get-href-of-anchor-when-the-
     // ==============================================
     for (i = 0; i < myTabs.length; i++) {
       myTabs[i].classList.remove('active');
-      myContentPanes[i].classList.remove('active');
+      myTabPanels[i].classList.remove('active');
     }
 
     var clickedTab = tabClickEvent.currentTarget;
-    
+
     clickedTab.classList.add('active');
+    
+    // if (!clickedTab.classList.contains('active')) {
+    //   // clickedTab.classList.add('active');
+    //   this.classList.add('active');
+    //   console.log(this);
+    // } else {
+    //   clickedTab.classList.add('active');
+    // }
 
     var anchorReference = tabClickEvent.target,
         activePaneId = anchorReference.getAttribute('href'),
-        activePane = document.querySelector(activePaneId);
+        activePanel = document.querySelector(activePaneId);
 
-    activePane.classList.add('active');
+    activePanel.classList.add('active');
   } // End of myTabClicks
 
   for (i = 0; i < myTabs.length; i++) {
