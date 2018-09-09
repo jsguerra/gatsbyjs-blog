@@ -363,7 +363,7 @@ h1, h2, h3, h4, h5, h6 {
       color: white;
       text-decoration: none; }
       .profile-header .profile-social a:hover {
-        color: black; }
+        color: #24292e; }
 
 .main {
   margin: 3.125rem auto; }
@@ -398,14 +398,46 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-pack: center;
       justify-content: center;
   overflow: auto; }
+  .nav-tabs li {
+    transition: 0.5s ease; }
   .nav-tabs .active {
     background-color: #706dc1; }
+    .nav-tabs .active a::before {
+      color: #24292e; }
   .nav-tabs a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.75rem;
     display: inline-block;
     color: white;
-    padding: 0.625rem 20px; }
+    padding: 0.625rem 20px;
+    text-align: center;
+    text-transform: uppercase; }
     .nav-tabs a:focus, .nav-tabs a:hover {
       text-decoration: none; }
+      .nav-tabs a:focus::before, .nav-tabs a:hover::before {
+        color: #24292e; }
+  .nav-tabs .glyph::before {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-size: 1.3125rem;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: block;
+    margin-bottom: 0.25rem; }
+  .nav-tabs .user::before {
+    content: '\e976'; }
+  .nav-tabs .profile::before {
+    content: '\e923'; }
+  .nav-tabs .portfolio::before {
+    content: '\e9ae'; }
+  .nav-tabs .blog::before {
+    content: '\e904'; }
 
 .profile-body {
   display: -ms-flexbox;

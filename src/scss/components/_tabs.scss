@@ -4,21 +4,83 @@
   overflow: auto;
 
   li {
-
+    transition: 0.5s ease;
   }
 
   .active {
     background-color: darken($blue-marguerite, 5%);
+
+    a::before {
+      color: $shark;
+    }
   }
 
   a {
+    font-family: $body-font;
+    font-size: cre(12);
     display: inline-block;
     color: white;
     padding: cre(10) $gutter;
+    text-align: center;
+    text-transform: uppercase;
 
     &:focus,
     &:hover {
       text-decoration: none;
+
+      &::before {
+        color: $shark;
+      }
+    }
+  }
+
+    // Glyph Styles
+  // ===================
+  .glyph {
+
+    &::before {
+      font-family: 'icomoon' !important;
+      speak: none;
+      font-size: cre(21);
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+    
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: block;
+      margin-bottom: cre(4);
+    }
+  }
+
+  .user {
+
+    &::before {
+      content: '\e976';
+    }
+  }
+
+  .profile {
+
+    &::before {
+      content: '\e923';
+    }
+  }
+
+  .portfolio {
+
+    &::before {
+      content: '\e9ae';
+    }
+  }
+
+  .blog {
+
+    &::before {
+      content: '\e904';
     }
   }
 }
