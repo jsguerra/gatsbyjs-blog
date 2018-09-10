@@ -400,22 +400,25 @@ h1, h2, h3, h4, h5, h6 {
   overflow: auto; }
   .nav-tabs li {
     transition: 0.5s ease; }
+    .nav-tabs li:hover {
+      background-color: #706dc1;
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25); }
   .nav-tabs .active {
-    background-color: #706dc1; }
-    .nav-tabs .active a::before {
-      color: #24292e; }
+    background-color: #706dc1;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25); }
+    .nav-tabs .active a {
+      color: white; }
   .nav-tabs a {
     font-family: "Open Sans", sans-serif;
     font-size: 0.75rem;
     display: inline-block;
-    color: white;
+    color: #eaecef;
     padding: 0.625rem 20px;
     text-align: center;
     text-transform: uppercase; }
     .nav-tabs a:focus, .nav-tabs a:hover {
+      color: white;
       text-decoration: none; }
-      .nav-tabs a:focus::before, .nav-tabs a:hover::before {
-        color: #24292e; }
   .nav-tabs .glyph::before {
     font-family: 'icomoon' !important;
     speak: none;
