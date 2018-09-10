@@ -5,13 +5,19 @@
 
   li {
     transition: 0.5s ease;
+
+    &:hover {
+      background-color: darken($blue-marguerite, 5%);
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    }
   }
 
   .active {
     background-color: darken($blue-marguerite, 5%);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
 
-    a::before {
-      color: $shark;
+    a {
+      color: white;
     }
   }
 
@@ -19,18 +25,15 @@
     font-family: $body-font;
     font-size: cre(12);
     display: inline-block;
-    color: white;
+    color: $athens-gray;
     padding: cre(10) $gutter;
     text-align: center;
     text-transform: uppercase;
 
     &:focus,
     &:hover {
+      color: white;
       text-decoration: none;
-
-      &::before {
-        color: $shark;
-      }
     }
   }
 
