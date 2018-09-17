@@ -96,7 +96,11 @@
 
 .tab-panel {
   display: none;
-  padding: $gutter * 2 $gutter * 2.5 $gutter;
+  padding: $gutter;
+
+  @include breakpoint($mobile) {
+    padding: ($gutter * 2) ($gutter * 2.5) $gutter;
+  }
 
   &.active {
     display: inline;
