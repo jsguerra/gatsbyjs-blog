@@ -24,3 +24,10 @@ $shark: #24292e;
 // ==================================
 $boundry: 700px;
 $gutter: 20px;
+
+$mobile: 600px;
+$tablet: 900px;
+$desktop: 1024px;
+
+// Configure breakpoints to be in ems
+$bp-in-ems: false;
