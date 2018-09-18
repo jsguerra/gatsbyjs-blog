@@ -339,7 +339,11 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   background-color: #9491d1; }
   .profile-header .profile-image img {
-    border-radius: 100%; }
+    border-radius: 100%;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.5s ease-in-out; }
+    .profile-header .profile-image img:hover {
+      box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.6); }
   .profile-header h1 {
     margin-bottom: 0; }
   .profile-header .profile-social {
@@ -385,7 +389,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-footer {
   font-size: 0.82353em;
-  text-align: center; }
+  text-align: center;
+  padding: 10px 0 0; }
+  @media (min-width: 600px) {
+    .site-footer {
+      padding: 20px 0;
+      margin-bottom: 20px; } }
 
 .site-nav {
   background-color: #827fc9; }
