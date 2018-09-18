@@ -1,4 +1,10 @@
 .site-footer {
-    font-size: ce(14);
-    text-align: center;
+  font-size: ce(14);
+  text-align: center;
+  padding: ($gutter / 2) 0 0;
+
+  @include breakpoint($mobile) {
+    padding: $gutter 0;
+    margin-bottom: $gutter;
+  }
 }
