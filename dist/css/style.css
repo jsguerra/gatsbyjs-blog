@@ -337,7 +337,11 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding: 40px 20px 10px;
   text-align: center;
-  background-color: #9491d1; }
+  background-color: #9491d1;
+  background: linear-gradient(to right, #07a, #0aa, #07a);
+  background-size: 200%;
+  background-position: 0%;
+  animation: bg-move 10s linear infinite; }
   .profile-header .profile-image img {
     border-radius: 100%;
     box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
@@ -368,6 +372,10 @@ h1, h2, h3, h4, h5, h6 {
       text-decoration: none; }
       .profile-header .profile-social a:hover {
         color: #24292e; }
+
+@keyframes bg-move {
+  to {
+    background-position: 200%; } }
 
 .main {
   margin: 0; }
