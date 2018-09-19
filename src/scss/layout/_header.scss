@@ -3,6 +3,10 @@
   padding: $gutter * 2 $gutter $gutter / 2;
   text-align: center;
   background-color: lighten($blue-marguerite, 5%);
+  background: linear-gradient(to right,#07a, #0aa, #07a);
+  background-size: 200%;
+  background-position: 0%;
+  animation: bg-move 10s linear infinite;
 
   .profile-image img {
     border-radius: 100%;
@@ -38,5 +42,12 @@
         color: $shark;
       }
     }
+  }
+}
+
+@keyframes bg-move
+{
+to {
+  background-position: 200%;
   }
 }
