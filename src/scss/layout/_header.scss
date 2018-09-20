@@ -3,7 +3,7 @@
   padding: $gutter * 2 $gutter $gutter / 2;
   text-align: center;
   background-color: lighten($blue-marguerite, 5%);
-  background: linear-gradient(to right,#07a, #0aa, #07a);
+  background: linear-gradient(90deg,#6562b1,#a5a2ea,#6562b1);
   background-size: 200%;
   background-position: 0%;
   animation: bg-move 10s linear infinite;
