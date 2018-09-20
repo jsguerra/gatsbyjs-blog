@@ -338,7 +338,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 40px 20px 10px;
   text-align: center;
   background-color: #9491d1;
-  background: linear-gradient(to right, #07a, #0aa, #07a);
+  background: linear-gradient(90deg, #6562b1, #a5a2ea, #6562b1);
   background-size: 200%;
   background-position: 0%;
   animation: bg-move 10s linear infinite; }
