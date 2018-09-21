@@ -338,10 +338,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 40px 20px 10px;
   text-align: center;
   background-color: #9491d1;
-  background: linear-gradient(90deg, #6562b1, #a5a2ea, #6562b1);
+  background: linear-gradient(135deg, #6562b1, #a5a2ea);
   background-size: 200%;
   background-position: 0%;
-  animation: bg-move 10s linear infinite; }
+  animation: bg-move 20s linear infinite; }
   .profile-header .profile-image img {
     border-radius: 100%;
     box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
@@ -374,8 +374,16 @@ h1, h2, h3, h4, h5, h6 {
         color: #24292e; }
 
 @keyframes bg-move {
-  to {
-    background-position: 200%; } }
+  0% {
+    background-position: 0%; }
+  25% {
+    background-position: 50%; }
+  50% {
+    background-position: 100%; }
+  75% {
+    background-position: 50%; }
+  100% {
+    background-position: 0%; } }
 
 .main {
   margin: 0; }
