@@ -3,10 +3,10 @@
   padding: $gutter * 2 $gutter $gutter / 2;
   text-align: center;
   background-color: lighten($blue-marguerite, 5%);
-  background: linear-gradient(90deg,#6562b1,#a5a2ea,#6562b1);
+  background: linear-gradient(135deg,#6562b1,#a5a2ea);
   background-size: 200%;
   background-position: 0%;
-  animation: bg-move 10s linear infinite;
+  animation: bg-move 20s linear infinite;
 
   .profile-image img {
     border-radius: 100%;
@@ -45,9 +45,13 @@
   }
 }
 
-@keyframes bg-move
-{
-to {
-  background-position: 200%;
-  }
+@keyframes bg-move {
+  // to {
+  //   background-position: 100%;
+  //   }
+  0% {background-position: 0%}
+  25% {background-position: 50%}
+  50% {background-position: 100%}
+  75% {background-position: 50%}
+  100% {background-position: 0%}
 }
